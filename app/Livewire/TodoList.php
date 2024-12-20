@@ -5,6 +5,7 @@ namespace App\Livewire;
 use Livewire\Component;
 use Illuminate\Support\Facades\View;
 use App\Models\Todo;
+use Illuminate\Support\Facades\Auth;
 
 class TodoList extends Component {
 
@@ -38,7 +39,8 @@ class TodoList extends Component {
         // Add
         $this->todos->push(Todo::create([
             'name' => '',
-            'is_completed' => FALSE
+            'is_completed' => FALSE,
+            'user_id' => Auth::user()->id
         ]));
     }
 }

@@ -11,7 +11,7 @@
                 <h3>Projects</h3>
                 <div class="flex flex-col">
                     <ul class="list-disc list-inside">
-                        <li><a href="todo-list">Todo-List</a></li>
+                        <li><a href="{{ route('todo-list') }}">Todo-List</a></li>
                     </ul>
                 </div>
             </div>

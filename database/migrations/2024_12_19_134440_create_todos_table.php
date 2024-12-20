@@ -14,6 +14,12 @@ return new class extends Migration {
             $table->id();
             $table->string('name');
             $table->boolean('is_completed');
+            $table->foreignId('user_id')
+                ->references('id')
+                ->on('users')
+                ->constrained('users', 'id', 'fk_todos_user_id')
+                ->cascadeOnUpdate()
+                ->restrictOnDelete();
             $table->timestamps();
         });
     }
