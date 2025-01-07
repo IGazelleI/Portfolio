@@ -11,7 +11,8 @@
                 <h3>Projects</h3>
                 <div class="flex flex-col">
                     <ul class="list-disc list-inside">
-                        <li><a href="{{ route('todo-list') }}">Todo-List</a></li>
+                        <li><a href="{{ route('todo-list') }}" wire:navigate>Todo-List</a></li>
+                        <li><a href="{{ route('blog') }}" wire:navigate>Blog</a></li>
                     </ul>
                 </div>
             </div>

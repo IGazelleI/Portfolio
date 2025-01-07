@@ -1,6 +1,5 @@
 <?php
 
-use App\Http\Controllers\TodoListController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\View;
 
@@ -16,9 +15,16 @@ Route::middleware([
 
     // Dashboard
     Route::get('/dashboard', function () {
-        return view('dashboard');
+        return View::make('dashboard');
     })->name('dashboard');
 
     // Todo
-    Route::get('/todo-list', [TodoListController::class, 'index'])->name('todo-list');
+    Route::get('/todo-list', function () {
+        return View::make('todo-list');
+    })->name('todo-list');
+
+    // Blog
+    Route::get('/blog', function () {
+        return View::make('blog');
+    })->name('blog');
 });
