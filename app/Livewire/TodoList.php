@@ -2,11 +2,13 @@
 
 namespace App\Livewire;
 
+use Livewire\Attributes\Title;
 use Livewire\Component;
 use Illuminate\Support\Facades\View;
 use App\Models\Todo;
 use Illuminate\Support\Facades\Auth;
 
+#[Title('Todo List')]
 class TodoList extends Component {
 
     // States
